@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My College</title>
+    <style>
+        /* Styling for body background */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg'); /* Replace 'background.jpg' with the actual image path */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            color: white;
+        }
+
+        /* Styling for the heading (College Name and Address) */
+        #college-info {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        #college-name {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        #college-address {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        /* Styling for the courses list */
+        #courses {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .course {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        /* Custom fonts, colors, and styles for each course */
+        .course1 {
+            color: #ff5733;
+            font-style: italic;
+        }
+
+        .course2 {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .course3 {
+            color: #3357ff;
+            text-decoration: underline;
+        }
+
+        /* Scrolling text (marquee) */
+        marquee {
+            font-size: 22px;
+            color: rgb(0, 0, 0);
+            margin: 30px 0;
+        }
+
+        /* Image at the bottom of the page */
+        #footer-img {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #footer-img img {
+            width: 200px; /* Adjust size as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- College Name and Address at the top -->
+    <div id="college-info">
+        <div id="college-name">My College Name</div>
+        <div id="college-address">123 College Street, City, State, ZIP</div>
+    </div>
+
+    <!-- List of Courses -->
+    <div id="courses">
+        <div class="course course1">Bachelor of Computer Applications</div>
+        <div class="course course2">Master of Business Administration</div>
+        <div class="course course3">Bachelor of Science in Information Technology</div>
+    </div>
+
+    <!-- Scrolling Text -->
+    <marquee behavior="scroll" direction="left">Welcome to My College - Excellence in Education Since 1990</marquee>
+
+    <!-- Image at the bottom -->
+    <div id="footer-img">
+        <img src="college_logo.png" alt="College Logo"> <!-- Replace 'college_logo.png' with your image path -->
+    </div>
+
+</body>
+</html>

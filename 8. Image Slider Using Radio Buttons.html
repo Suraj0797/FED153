@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slider {
+            width: 60%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: flex;
+            width: 500%;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Radio buttons (hidden) */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Navigation controls (dots) */
+        .navigation-manual {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .manual-btn {
+            border: 2px solid #ddd;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin: 0 5px;
+        }
+
+        .manual-btn:hover {
+            background: #333;
+        }
+
+        /* Slider navigation using radio buttons */
+        #radio1:checked ~ .first {
+            transform: translateX(0);
+        }
+
+        #radio2:checked ~ .first {
+            transform: translateX(-100%);
+        }
+
+        #radio3:checked ~ .first {
+            transform: translateX(-200%);
+        }
+
+        #radio4:checked ~ .first {
+            transform: translateX(-300%);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Image Slider Container -->
+    <div class="slider">
+        <!-- Radio buttons for navigation -->
+        <input type="radio" name="slider" id="radio1" checked>
+        <input type="radio" name="slider" id="radio2">
+        <input type="radio" name="slider" id="radio3">
+        <input type="radio" name="slider" id="radio4">
+
+        <!-- Images (slides) -->
+        <div class="slides first">
+            <img src="https://via.placeholder.com/800x400/ff7f7f/333333?text=Image+1" alt="Image 1">
+            <img src="https://via.placeholder.com/800x400/7f7fff/333333?text=Image+2" alt="Image 2">
+            <img src="https://via.placeholder.com/800x400/7fff7f/333333?text=Image+3" alt="Image 3">
+            <img src="https://via.placeholder.com/800x400/ffff7f/333333?text=Image+4" alt="Image 4">
+        </div>
+
+        <!-- Navigation Manual (small dots) -->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+
+</body>
+</html>

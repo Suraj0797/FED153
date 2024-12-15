@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Digits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sum of Digits Calculator</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number" required>
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <div id="result"></div>
+
+    <script>
+        function calculateSum() {
+            const number = document.getElementById("numberInput").value;
+            let sum = 0;
+
+            // Check if the input is a valid number
+            if (number === "" || isNaN(number)) {
+                document.getElementById("result").innerText = "Please enter a valid number.";
+                return;
+            }
+
+            // Convert the number to a string to iterate through each digit
+            const digits = number.toString();
+
+            // Calculate the sum of digits
+            for (let digit of digits) {
+                sum += parseInt(digit, 10); // Convert each character back to an integer
+            }
+
+            // Display the result
+            document.getElementById("result").innerText = "Sum of digits: " + sum;
+        }
+    </script>
+
+</body>
+</html>

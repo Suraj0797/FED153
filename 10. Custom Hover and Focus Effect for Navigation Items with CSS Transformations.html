@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu with Hover Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+            border-radius: 5px;
+        }
+
+        .nav-item {
+            margin: 0 15px;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #ff4081; /* Color of the underline */
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0); /* Start with no underline */
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        .nav-item:hover,
+        .nav-item:focus {
+            color: #ff4081; /* Change text color on hover/focus */
+        }
+
+        .nav-item:hover::before,
+        .nav-item:focus::before {
+            transform: scaleX(1); /* Show underline on hover/focus */
+        }
+
+        /* Optional: For accessibility */
+        .nav-item:focus {
+            outline: none; /* Remove default focus outline */
+            box-shadow: 0 0 5px #ff4081; /* Add custom focus outline */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="nav-item">Home</a>
+        <a href="#" class="nav-item">About</a>
+        <a href="#" class="nav-item">Services</a>
+        <a href="#" class="nav-item">Contact</a>
+    </nav>
+
+</body>
+</html>

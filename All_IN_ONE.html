@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML, CSS, and JavaScript Tasks</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-family: Arial;">HTML, CSS, and JavaScript Tasks</h1>
+
+    <!-- Task 1: Frameset Example -->
+    <h2 style="color: blue;">Task 1: Frameset Example</h2>
+    <p style="color: gray;">This task requires an external frameset setup. Please refer to the provided code snippet.</p>
+
+    <!-- Task 2: College Info -->
+    <h2 style="color: blue;">Task 2: College Info</h2>
+    <div style="border: 1px solid black; padding: 10px;">
+        <h3>XYZ College</h3>
+        <p>Welcome to XYZ College, a place of excellence in education and innovation.</p>
+        <ul>
+            <li>Engineering</li>
+            <li>Science</li>
+            <li>Arts</li>
+        </ul>
+    </div>
+
+    <!-- Task 3: Table Formatting with Internal CSS -->
+    <h2 style="color: blue;">Task 3: Table Formatting</h2>
+    <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+        <tr style="background-color: #f2f2f2;">
+            <th style="padding: 10px;">Name</th>
+            <th style="padding: 10px;">Roll Number</th>
+            <th style="padding: 10px;">Class</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Alice</td>
+            <td style="text-align: center;">101</td>
+            <td style="text-align: center;">12th</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Bob</td>
+            <td style="text-align: center;">102</td>
+            <td style="text-align: center;">12th</td>
+        </tr>
+    </table>
+
+    <!-- Task 4: Inline CSS Example -->
+    <h2 style="color: blue;">Task 4: Inline CSS</h2>
+    <p style="color: green; font-size: 18px;">This is a green paragraph with inline styling.</p>
+
+    <!-- Task 5: Travel Plan Form -->
+    <h2 style="color: blue;">Task 5: Travel Plan Form</h2>
+    <form style="border: 1px solid black; padding: 10px;">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" style="margin-bottom: 10px;"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" style="margin-bottom: 10px;"><br>
+        <label for="destination">Destination:</label><br>
+        <input type="text" id="destination" name="destination" style="margin-bottom: 10px;"><br>
+        <label for="date">Travel Date:</label><br>
+        <input type="date" id="date" name="date" style="margin-bottom: 10px;"><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Task 6: Ellipse Example -->
+    <h2 style="color: blue;">Task 6: Ellipse</h2>
+    <div style="width: 200px; height: 100px; background-color: lightblue; border-radius: 50%;"></div>
+
+    <!-- Task 7: Calendar -->
+    <h2 style="color: blue;">Task 7: Calendar</h2>
+    <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+        <tr style="background-color: #f2f2f2;">
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+        <tr>
+            <td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+        </tr>
+        <!-- Add additional days here -->
+    </table>
+
+    <!-- Task 11: Sum of Digits -->
+    <h2 style="color: blue;">Task 11: Sum of Digits</h2>
+    <script>
+        function calculateSum() {
+            let number = prompt("Enter a number:");
+            let sum = 0;
+            while (number > 0) {
+                sum += number % 10;
+                number = Math.floor(number / 10);
+            }
+            alert("Sum of digits: " + sum);
+        }
+    </script>
+    <button onclick="calculateSum()">Calculate Sum of Digits</button>
+
+    <!-- Task 12: Vowel Count -->
+    <h2 style="color: blue;">Task 12: Vowel Count</h2>
+    <script>
+        function countVowels() {
+            let input = prompt("Enter a string:");
+            let vowels = "aeiouAEIOU";
+            let count = 0;
+            for (let char of input) {
+                if (vowels.includes(char)) {
+                    count++;
+                }
+            }
+            alert("Number of vowels: " + count);
+        }
+    </script>
+    <button onclick="countVowels()">Count Vowels</button>
+
+    <!-- Task 13: Factors Array -->
+    <h2 style="color: blue;">Task 13: Factors Array</h2>
+    <script>
+        function findFactors() {
+            let number = parseInt(prompt("Enter a number:"));
+            let factors = [];
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    factors.push(i);
+                }
+            }
+            alert("Factors: " + factors.join(", "));
+        }
+    </script>
+    <button onclick="findFactors()">Find Factors</button>
+
+    <!-- Task 14: Digital Clock & Calculator -->
+    <h2 style="color: blue;">Task 14: Digital Clock</h2>
+    <div id="clock" style="font-size: 20px; font-weight: bold;"></div>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById("clock").innerText = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+    <h2 style="color: blue;">Task 14: Calculator</h2>
+    <div>
+        <input type="number" id="num1" placeholder="First Number" style="margin-right: 10px;">
+        <input type="number" id="num2" placeholder="Second Number" style="margin-right: 10px;">
+        <select id="operator" style="margin-right: 10px;">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <button onclick="calculate()">Calculate</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function calculate() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const operator = document.getElementById("operator").value;
+
+            let result;
+            if (operator === "+") result = num1 + num2;
+            else if (operator === "-") result = num1 - num2;
+            else if (operator === "*") result = num1 * num2;
+            else if (operator === "/") result = num1 / num2;
+
+            document.getElementById("result").innerText = "Result: " + result;
+        }
+    </script>
+
+</body>
+</html>

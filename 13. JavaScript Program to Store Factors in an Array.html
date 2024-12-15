@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factor Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Factor Finder</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number" required>
+    <button onclick="findFactors()">Find Factors</button>
+    <div id="result"></div>
+
+    <script>
+        function findFactors() {
+            const number = parseInt(document.getElementById("numberInput").value);
+            const factors = [];
+
+            // Check if the input is a valid number
+            if (isNaN(number) || number <= 0) {
+                document.getElementById("result").innerText = "Please enter a valid positive number.";
+                return;
+            }
+
+            // Calculate factors
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    factors.push(i);
+                }
+            }
+
+            // Display the result
+            document.getElementById("result").innerText = "Factors: " + factors.join(", ");
+        }
+    </script>
+
+</body>
+</html>

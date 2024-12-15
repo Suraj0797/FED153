@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Industries in India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        table {
+            width: 70%;
+            height: 70vh;
+            border-collapse: collapse;
+            border: 1px solid #000;
+        }
+        td {
+            border: 1px solid #000;
+            vertical-align: top;
+            padding: 10px;
+        }
+        #heading {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+        #left {
+            width: 30%;
+            background-color: #f9f9f9;
+        }
+        #right {
+            width: 70%;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function showInfo(city) {
+            var info = {
+                "Pune": "<h2>Pune</h2><ul><li>Infosys</li><li>Persistent</li></ul>",
+                "Mumbai": "<h2>Mumbai</h2><ul><li>TCS</li><li>Wipro</li></ul>"
+            };
+            document.getElementById("info").innerHTML = info[city];
+        }
+    </script>
+</head>
+<body>
+
+<table>
+    <!-- Row for the heading -->
+    <tr>
+        <td colspan="2" id="heading">IT Industries in India</td>
+    </tr>
+
+    <!-- Row for the cities and information -->
+    <tr>
+        <!-- Left column for city names -->
+        <td id="left">
+            <h2>City</h2>
+            <ul>
+                <li><a href="#" onclick="showInfo('Pune')">Pune</a></li>
+                <li><a href="#" onclick="showInfo('Mumbai')">Mumbai</a></li>
+            </ul>
+        </td>
+        
+        <!-- Right column for displaying information -->
+        <td id="right">
+            <div id="info">
+                <h2>Welcome to IT Industries in India</h2>
+                <p>Select a city to view the industries.</p>
+            </div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

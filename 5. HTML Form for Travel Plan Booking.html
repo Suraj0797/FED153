@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Plan Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            width: 30%;
+            font-size: 16px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 65%;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+        .form-group input[type="radio"] {
+            width: auto;
+        }
+        .form-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-buttons input {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Travel Plan Booking Form</h2>
+
+        <form action="#" method="POST">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Address Field -->
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+
+            <!-- Contact Number Field -->
+            <div class="form-group">
+                <label for="contact">Contact No.:</label>
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+
+            <!-- Gender Field -->
+            <div class="form-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </div>
+
+            <!-- Preferred Season (Checkboxes) -->
+            <div class="form-group">
+                <label>Preferred Season:</label>
+                <input type="checkbox" id="summer" name="season" value="Summer">
+                <label for="summer">Summer</label>
+                <input type="checkbox" id="winter" name="season" value="Winter">
+                <label for="winter">Winter</label>
+                <input type="checkbox" id="spring" name="season" value="Spring">
+                <label for="spring">Spring</label>
+                <input type="checkbox" id="monsoon" name="season" value="Monsoon">
+                <label for="monsoon">Monsoon</label>
+            </div>
+
+            <!-- Location Type (Dropdown) -->
+            <div class="form-group">
+                <label for="location">Location Type:</label>
+                <select id="location" name="location">
+                    <option value="Beach">Beach</option>
+                    <option value="Hill Station">Hill Station</option>
+                    <option value="Forest">Forest</option>
+                    <option value="Desert">Desert</option>
+                    <option value="City">City</option>
+                </select>
+            </div>
+
+            <!-- Buttons for Submit and Reset -->
+            <div class="form-buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </
