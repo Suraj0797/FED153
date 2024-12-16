@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Industries in India</title>
+    <style>
+        body {
+            margin: 0;
+            display: grid;
+            grid-template-rows: 100px auto;
+            grid-template-columns: 200px auto;
+            height: 100vh;
+        }
+        header {
+            grid-column: 1 / span 2;
+            background: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            background: #ddd;
+            padding: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        IT Industries in India
+    </header>
+    <nav>
+        <ul>
+            <li><a href="frame3.html" target="infoFrame">Pune</a></li>
+            <li><a href="#" target="infoFrame">Mumbai</a></li>
+        </ul>
+    </nav>
+    <iframe src="frame3.html" name="infoFrame"></iframe>
+</body>
+</html>

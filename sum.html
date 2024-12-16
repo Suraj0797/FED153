@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Sum of Digits</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f0f8ff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        } 
+        .container { 
+            text-align: center; 
+            background: #ffffff; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            width: 300px; 
+        } 
+        input { 
+            padding: 10px; 
+            font-size: 16px; 
+            width: 80%; 
+            margin-bottom: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        } 
+        button { 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            color: #fff; 
+            background-color: #007bff; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+        } 
+        button:hover { 
+            background-color: #0056b3; 
+        } 
+        .result { 
+            margin-top: 20px; 
+            font-size: 18px; 
+            color: #333; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+        <h2>Sum of Digits Calculator</h2> 
+        <input type="text" id="numberInput" placeholder="Enter a number" /> 
+        <button onclick="calculateSum()">Calculate</button> 
+        <div class="result" id="result"></div> 
+    </div> 
+ 
+    <script> 
+        function calculateSum() { 
+            const input = document.getElementById("numberInput").value; 
+            if (!/^\d+$/.test(input)) { 
+                document.getElementById("result").innerText = "Please enter a valid number."; 
+                return; 
+            } 
+ 
+            let sum = 0; 
+            for (let char of input) { 
+                sum += parseInt(char, 10); 
+            } 
+ 
+            document.getElementById("result").innerText = `The sum of digits is: ${sum}`; 
+        } 
+    </script> 
+</body> 
+</html>

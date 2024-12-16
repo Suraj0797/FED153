@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Calendar using HTML and CSS</title> 
+    <style> 
+    body { 
+      font-family: Arial, sans-serif; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      min-height: 100vh; 
+      background-color: #f4f4f9; 
+    } 
+    .calendar { 
+      width: 90%; 
+      max-width: 400px; 
+      background: #ffffff; 
+      border: 1px solid #000000; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+      overflow: hidden; 
+    } 
+    .calendar_header { 
+      text-align: center; 
+      background: #ffffff; 
+      color: rgb(0, 0, 0); 
+      padding: 15px; 
+      font-size: 20px; 
+      font-weight: bold; 
+    } 
+    .calendar_body { 
+      display: grid; 
+      grid-template-columns: repeat(7, 1fr); 
+      grid-auto-rows: 50px; 
+      text-align: center; 
+      font-size: 16px; 
+    } 
+    .day, .dates { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border: 1px solid #000000; 
+    } 
+    .day { 
+      background: #ffffff; 
+      font-weight: bold; 
+      color: #000; 
+    } 
+    .dates { 
+      background: #ffffff; 
+      transition: background 0.3s; 
+    } 
+    .dates:hover { 
+      background: #f1c40f; 
+      color: #ffffff; 
+      cursor: pointer; 
+    } 
+    </style> 
+</head> 
+<body> 
+    <div class="calendar"> 
+        <div class="calendar_header">December 2024</div> 
+            <div class="calendar_body"> 
+                <div class="day">Sun</div> 
+                <div class="day">Mon</div> 
+                <div class="day">Tue</div> 
+                <div class="day">Wed</div> 
+                <div class="day">Thu</div> 
+                <div class="day">Fri</div> 
+                <div class="day">Sat</div> 
+                <div class="dates">1</div> 
+                <div class="dates">2</div> 
+                <div class="dates">3</div> 
+                <div class="dates">4</div> 
+                <div class="dates">5</div> 
+                <div class="dates">6</div> 
+                <div class="dates">7</div> 
+                <div class="dates">8</div> 
+                <div class="dates">9</div> 
+                <div class="dates">10</div> 
+                <div class="dates">11</div> 
+                <div class="dates">12</div> 
+                <div class="dates">13</div> 
+                <div class="dates">14</div> 
+                <div class="dates">15</div> 
+                <div class="dates">16</div> 
+                <div class="dates">17</div> 
+                <div class="dates">18</div> 
+                <div class="dates">19</div> 
+                <div class="dates">20</div> 
+                <div class="dates">21</div> 
+                <div class="dates">22</div> 
+                <div class="dates">23</div> 
+                <div class="dates">24</div> 
+                <div class="dates">25</div> 
+                <div class="dates">26</div> 
+                <div class="dates">27</div> 
+                <div class="dates">28</div> 
+                <div class="dates">29</div> 
+                <div class="dates">30</div> 
+                <div class="dates">31</div> 
+                <div class="dates"></div> 
+                <div class="dates"></div> 
+                <div class="dates"></div> 
+                <div class="dates"></div> 
+            </div> 
+    </div> 
+</body> 
+</html>

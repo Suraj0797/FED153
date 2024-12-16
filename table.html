@@ -1,0 +1,78 @@
+ 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>create table using internal CSS </title> 
+    <style> 
+        body{ 
+            text-align: -webkit-center; 
+            position: relative; 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+            font-size: 20px; 
+            padding-top: 5rem; 
+        } 
+        .table-frame tr td { 
+            font-size: 30px; 
+            font-weight: 900; 
+            padding: 20px; 
+        } 
+        .tr-frame1{ 
+            background-color: #0edccb; 
+            color: #000; 
+        } 
+    </style> 
+</head> 
+<body> 
+        <table border="6" class="table-frame"> 
+        <tr class="tr-frame1"> 
+            <td>Country</td> 
+            <td colspan="2">Poulation (in Crores)</td> 
+        </tr>      
+   <tr> 
+            <tr> 
+                <td rowspan="3">India</td> 
+                <td>1998</td> 
+                <td>85</td>            
+ </tr> 
+            <tr> 
+                <td>1999</td> 
+                <td>90</td> 
+            </tr> 
+            <tr> 
+                    <td>2000</td> 
+                    <td>100</td> 
+            </tr>    
+     </tr> 
+        <tr>       
+      <tr> 
+                <td rowspan="3">USA</td> 
+                <td>1998</td> 
+                <td>30</td> 
+            </tr> 
+            <tr> 
+                <td>1999</td> 
+                <td>35</td>          
+   </tr> 
+            <tr> 
+                <td>2000</td> 
+                <td>40</td> 
+            </tr>         
+</tr> 
+        <tr>         
+    <tr> 
+                <td rowspan="3">UK</td> 
+                <td>1998</td> 
+                <td>25</td>          
+   </tr> 
+                <tr> 
+                    <td>1999</td> 
+                    <td>30</td>          
+       </tr> 
+                <tr> 
+                    <td>2000</td> 
+                    <td>35</td>              
+   </tr> 
+        </tr> 
+        </table> 
+</body> 
+</html> 
